@@ -66,7 +66,6 @@ public class CustomerController {
         return ResponseEntity.ok(mongoCustomerService.getAllCustomer());
     }
 
-
     /**
      * Rest End points for /mysql mapping
      */
