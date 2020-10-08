@@ -1,0 +1,27 @@
+#MongoDB Datasource Configuration
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customerDB
+
+#JPA Datasource Configuration
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/customerDB?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+server:
+  error:
+    include-message: always
+  port: 8282
